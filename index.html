@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+
+<body>
+
+  <div class="bb">
+    <div class="left">
+      <img src="./images/bg-main-desktop.png" alt="bg">
+      <img src="./images/bg-main-mobile.png" class="img2" alt="bg">
+    </div>
+    <div class="right">
+      <div class="card">
+        <div class="card-front">
+          <img src="./images/card-logo.svg" alt="logo">
+          <div class="card-details">
+            <p id="cardholder-name-preview">Jane Appleased</p>
+            <p id="card-number-preview">0000 0000 0000 0000</p>
+            <p id="expiry-date-preview">00/00</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <div class="card-details2">
+            <p id="cvc-preview">000</p>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <form id="card-form" class="form">
+          <label for="cardholder-name">CARDHOLDER NAME</label>
+          <input type="text" id="cardholder-name" placeholder="eg. Jane Appleased">
+          <div id="cardholder-name-error" class="error-message"></div>
+
+          <label for="card-number">CARD NUMBER</label>
+          <input type="text" id="card-number" placeholder="eg. 1234 5678 9101 1121">
+          <div id="card-number-error" class="error-message"></div>
+
+          <div class="exp-cvc">
+            <div>
+              <label for="expiry-date">EXP. DATE (MM/YY)</label>
+              <input type="text" id="expiry-date" placeholder="MM/YY">
+              <div id="expiry-date-error" class="error-message"></div>
+            </div>
+            <div>
+              <label for="cvc">CVC:</label>
+              <input type="text" id="cvc" placeholder="eg. 123">
+              <div id="cvc-error" class="error-message"></div>
+            </div>
+          </div>
+          <div id="error-message"></div>
+          <button type="submit">Confirm</button>
+        </form>
+        <div id="completed-state" style="display: none;">
+          <img src="./images/icon-complete.svg" alt="complete">
+          <h1>THANK YOU!</h1>
+          <p>We've added your card details.</p>
+          <button id="continue-button">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
